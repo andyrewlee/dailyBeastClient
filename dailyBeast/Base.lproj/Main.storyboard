@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qyY-CF-ozU">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Headlines-->
+        <scene sceneID="p02-sX-aj7">
+            <objects>
+                <tableViewController id="rnk-4m-Hag" customClass="HeadlinesViewController" customModule="dailyBeast" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NSN-8z-496">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TitleCell" textLabel="JK9-gW-Fwj" style="IBUITableViewCellStyleDefault" id="aRB-V6-ACo">
+                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aRB-V6-ACo" id="w41-d0-mup">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JK9-gW-Fwj">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rnk-4m-Hag" id="qY7-Yb-6m5"/>
+                            <outlet property="delegate" destination="rnk-4m-Hag" id="H7f-Ca-Uyn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Headlines" id="hfW-ki-2pR"/>
+                    <connections>
+                        <segue destination="hLv-Dy-9TX" kind="show" identifier="NewsSegue" id="Qdr-MG-J7b"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="76d-94-Jpe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991" y="386"/>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="leT-kL-da7">
+            <objects>
+                <viewController id="hLv-Dy-9TX" customClass="NewsViewController" customModule="dailyBeast" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aHX-5z-jHW"/>
+                        <viewControllerLayoutGuide type="bottom" id="bfb-n3-oSs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="brg-KG-jaK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Little League Team ‘Threw’ World Series" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQy-SV-gVd">
+                                <rect key="frame" x="20" y="72" width="560" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2up-Z5-H8e">
+                                <rect key="frame" x="20" y="100" width="560" height="162.5"/>
+                                <mutableString key="text">A girls' Little League team from Washington was accused of throwing a World Series game after it lost 8-0 on Monday. The undefeated South Snohomish, Washington team was no-hit by a North Carolina team, which meant it would not go on to play an otherwise-undefeated Iowa team it had previously beaten. In response to the apparent tanking, Little League International ordered the Washington team to play the Iowa team in a special playoff game to determine who would go to the semifinals. On Tuesday, the Iowa team beat the Wahsington team 3-2 and advanced.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lor-16-H5r">
+                                <rect key="frame" x="283" y="550" width="35" height="30"/>
+                                <state key="normal" title="Read"/>
+                                <connections>
+                                    <action selector="readButtonPressed:" destination="hLv-Dy-9TX" eventType="touchUpInside" id="XmY-DN-R8v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2up-Z5-H8e" firstAttribute="centerX" secondItem="brg-KG-jaK" secondAttribute="centerX" id="4QR-jF-Zqd"/>
+                            <constraint firstItem="2up-Z5-H8e" firstAttribute="top" secondItem="UQy-SV-gVd" secondAttribute="bottom" constant="8" id="BJ0-8X-kd9"/>
+                            <constraint firstItem="Lor-16-H5r" firstAttribute="centerX" secondItem="brg-KG-jaK" secondAttribute="centerX" id="IPO-HG-eGV"/>
+                            <constraint firstItem="UQy-SV-gVd" firstAttribute="top" secondItem="aHX-5z-jHW" secondAttribute="bottom" constant="8" id="QRX-P1-qVO"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="UQy-SV-gVd" secondAttribute="leading" id="ScZ-dM-bHG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2up-Z5-H8e" secondAttribute="trailing" id="XdV-uQ-hhG"/>
+                            <constraint firstItem="UQy-SV-gVd" firstAttribute="centerX" secondItem="brg-KG-jaK" secondAttribute="centerX" id="YM3-LG-LH1"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="2up-Z5-H8e" secondAttribute="leading" id="kgO-YF-rtl"/>
+                            <constraint firstItem="bfb-n3-oSs" firstAttribute="top" secondItem="Lor-16-H5r" secondAttribute="bottom" constant="20" id="v0g-Ta-UFO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UQy-SV-gVd" secondAttribute="trailing" id="v4s-aT-6sR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentLabel" destination="2up-Z5-H8e" id="2KD-mf-nWI"/>
+                        <outlet property="headlineLabel" destination="UQy-SV-gVd" id="dM1-tI-vsu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSM-XP-y1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1655" y="386"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Eom-bp-U6J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qyY-CF-ozU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kTB-aV-wdc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rnk-4m-Hag" kind="relationship" relationship="rootViewController" id="DdN-go-CRC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xiw-Pt-QX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="314" y="386"/>
+        </scene>
+    </scenes>
+</document>
