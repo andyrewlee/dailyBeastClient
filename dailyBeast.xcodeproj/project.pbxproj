@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A6F7CA61B84E00400EC23A0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F7CA51B84E00400EC23A0 /* SettingsViewController.swift */; };
 		5AF2061B1B83B80F00028D07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2061A1B83B80F00028D07 /* AppDelegate.swift */; };
 		5AF2061D1B83B80F00028D07 /* HeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2061C1B83B80F00028D07 /* HeadlinesViewController.swift */; };
 		5AF206201B83B80F00028D07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF2061E1B83B80F00028D07 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A6F7CA51B84E00400EC23A0 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5AF206171B83B80F00028D07 /* dailyBeast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dailyBeast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF2061A1B83B80F00028D07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AF2061C1B83B80F00028D07 /* HeadlinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				5AF2061A1B83B80F00028D07 /* AppDelegate.swift */,
 				5AF2061C1B83B80F00028D07 /* HeadlinesViewController.swift */,
 				5AF2062C1B83BACE00028D07 /* NewsViewController.swift */,
+				5A6F7CA51B84E00400EC23A0 /* SettingsViewController.swift */,
 				5AF2061E1B83B80F00028D07 /* Main.storyboard */,
 				5AF206211B83B80F00028D07 /* Assets.xcassets */,
 				5AF206231B83B80F00028D07 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 				5AF2062D1B83BACE00028D07 /* NewsViewController.swift in Sources */,
 				5AF2061D1B83B80F00028D07 /* HeadlinesViewController.swift in Sources */,
 				5AF2061B1B83B80F00028D07 /* AppDelegate.swift in Sources */,
+				5A6F7CA61B84E00400EC23A0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +293,7 @@
 				5AF2062B1B83B80F00028D07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

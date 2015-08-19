@@ -13,17 +13,13 @@ class HeadlinesViewController: UITableViewController {
     var news = [String]()
     var links = [String]()
     
+    // MARK: Overrides
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         getNews()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "NewsSegue" {
             let controller = segue.destinationViewController as! NewsViewController
@@ -32,9 +28,11 @@ class HeadlinesViewController: UITableViewController {
             controller.headline = news[lastIndexTapped]
         }
     }
+    
+    // MARK: Methods
 
     func getNews() {
-        if let urlToReq = NSURL(string: "http://localhost:4567/titles") {
+        if let urlToReq = NSURL(string: "https://secure-earth-3377.herokuapp.com/titles") {
             if let data = NSData(contentsOfURL: urlToReq) {
                 let arrOfNewsTitles = parseJSON(data)
                 for title in arrOfNewsTitles! {
@@ -43,7 +41,7 @@ class HeadlinesViewController: UITableViewController {
             }
         }
         
-        if let urlToReq = NSURL(string: "http://localhost:4567/links") {
+        if let urlToReq = NSURL(string: "https://secure-earth-3377.herokuapp.com/links") {
             if let data = NSData(contentsOfURL: urlToReq) {
                 let arrOfNewsLinks = parseJSON(data)
                 for link in arrOfNewsLinks! {
